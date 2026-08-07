@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Emblème de La Paillote de Massane : soleil couchant sur toit de chaume">
+  <circle cx="50" cy="50" r="48" fill="#c9773f"/>
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#d9a441" stroke-width="2"/>
+  <circle cx="50" cy="42" r="14" fill="#fdf3de"/>
+  <path d="M20 66 L50 40 L80 66 Z" fill="#fffaf1"/>
+  <path d="M20 66 L80 66 L86 74 L14 74 Z" fill="#e2d2ac"/>
+  <g stroke="#5f6b3f" stroke-width="3" stroke-linecap="round">
+    <path d="M50 74 L50 90"/>
+    <path d="M50 78 Q38 74 34 84"/>
+    <path d="M50 78 Q62 74 66 84"/>
+  </g>
+</svg>

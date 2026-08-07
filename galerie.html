@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie photos | La Paillote de Massane</title>
+  <meta name="description" content="Découvrez en images l'ambiance de La Paillote de Massane : terrasse, cocktails, plats, soirées et décor de Massane." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lapaillotedemassane.fr/galerie.html" />
+  <meta name="theme-color" content="#c9773f" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="La Paillote de Massane" />
+  <meta property="og:title" content="Galerie photos | La Paillote de Massane" />
+  <meta property="og:description" content="L'ambiance de La Paillote de Massane en images : terrasse, cocktails, plats et soirées." />
+  <meta property="og:image" content="images/gallery-terrace.jpg" />
+  <meta property="og:url" content="https://www.lapaillotedemassane.fr/galerie.html" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="apple-touch-icon" href="images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" style="position:absolute;left:-9999px;top:0;background:#fff;padding:0.8rem 1.2rem;z-index:2000;">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo-mark.svg" alt="" class="brand__mark" width="38" height="38" />
+        <span class="brand__text"><small>Bar &amp; Restaurant</small>La Paillote de Massane</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="carte.html">La Carte</a>
+        <a href="evenements.html">Événements</a>
+        <a href="galerie.html" class="is-active">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html#reservation" class="btn btn--primary btn--sm">Réserver une table</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="page-hero__bg" data-parallax="0.12">
+        <img src="images/gallery-terrace.jpg" alt="Terrasse de La Paillote de Massane au coucher du soleil" width="800" height="600" />
+      </div>
+      <div class="page-hero__overlay"></div>
+      <div class="container page-hero__content">
+        <p class="section-eyebrow">En images</p>
+        <h1>Galerie</h1>
+        <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Galerie</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="section-eyebrow">Immersion</p>
+          <h2 class="section-heading">L'ambiance de La Paillote de Massane</h2>
+          <p class="section-lead">Terrasse, bar, cuisine et soirées : parcourez notre galerie et laissez-vous transporter par le décor de Massane.</p>
+        </div>
+
+        <div class="gallery-filter" data-reveal>
+          <button class="is-active" data-filter="all">Tout</button>
+          <button data-filter="terrasse">Terrasse</button>
+          <button data-filter="bar">Bar &amp; Cocktails</button>
+          <button data-filter="cuisine">Cuisine</button>
+          <button data-filter="ambiance">Ambiance</button>
+        </div>
+
+        <div class="gallery-grid" data-reveal-group>
+          <div class="gallery-item gallery-item--wide gallery-item--tall" data-category="terrasse" data-caption="Terrasse au coucher du soleil" data-reveal="scale" style="--i:0;">
+            <img src="images/gallery-terrace.jpg" alt="Terrasse en bois de La Paillote de Massane au coucher du soleil" loading="lazy" />
+            <span class="gallery-item__caption">Terrasse au coucher du soleil</span>
+          </div>
+
+          <div class="gallery-item" data-category="bar" data-caption="Cocktail signature du bar" data-reveal="scale" style="--i:1;">
+            <img src="images/gallery-cocktail.jpg" alt="Cocktail signature servi au bar" loading="lazy" />
+            <span class="gallery-item__caption">Cocktail signature</span>
+          </div>
+
+          <div class="gallery-item" data-category="ambiance" data-caption="Guirlandes lumineuses au crépuscule" data-reveal="scale" style="--i:2;">
+            <img src="images/gallery-lights.jpg" alt="Guirlandes lumineuses au crépuscule sur la terrasse" loading="lazy" />
+            <span class="gallery-item__caption">Lumières du soir</span>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" data-caption="Assiette gourmande de saison" data-reveal="scale" style="--i:3;">
+            <img src="images/gallery-dish.jpg" alt="Assiette gourmande de saison servie en salle" loading="lazy" />
+            <span class="gallery-item__caption">Assiette de saison</span>
+          </div>
+
+          <div class="gallery-item gallery-item--wide" data-category="ambiance" data-caption="Vue sur les collines de Massane" data-reveal="scale" style="--i:4;">
+            <img src="images/gallery-hills.jpg" alt="Vue panoramique sur les collines de Massane" loading="lazy" />
+            <span class="gallery-item__caption">Les collines de Massane</span>
+          </div>
+
+          <div class="gallery-item" data-category="bar" data-caption="Comptoir du bar en bois massif" data-reveal="scale" style="--i:5;">
+            <img src="images/gallery-bar-counter.jpg" alt="Comptoir du bar en bois avec bouteilles" loading="lazy" />
+            <span class="gallery-item__caption">Le comptoir</span>
+          </div>
+
+          <div class="gallery-item gallery-item--tall" data-category="ambiance" data-caption="Moment convivial entre amis" data-reveal="scale" style="--i:6;">
+            <img src="images/gallery-friends.jpg" alt="Amis trinquant sur la terrasse au coucher du soleil" loading="lazy" />
+            <span class="gallery-item__caption">Entre amis</span>
+          </div>
+
+          <div class="gallery-item" data-category="terrasse" data-caption="Détail du toit de chaume" data-reveal="scale" style="--i:7;">
+            <img src="images/gallery-roof.jpg" alt="Détail texturé du toit de chaume de la paillote" loading="lazy" />
+            <span class="gallery-item__caption">Le toit de chaume</span>
+          </div>
+
+          <div class="gallery-item" data-category="cuisine" data-caption="Petit-déjeuner en terrasse" data-reveal="scale" style="--i:0;">
+            <img src="images/carte-petit-dej.jpg" alt="Petit-déjeuner avec croissant et café servi en terrasse" loading="lazy" />
+            <span class="gallery-item__caption">Petit-déjeuner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <img src="images/hero-paillote.jpg" alt="" aria-hidden="true" data-parallax="0.1" />
+      <div class="container">
+        <p class="section-eyebrow" style="justify-content:center;color:var(--color-gold);" data-reveal>Envie de le vivre ?</p>
+        <h2 class="section-heading" data-reveal>Venez découvrir La Paillote en vrai</h2>
+        <div class="btn-row" data-reveal>
+          <a href="contact.html#reservation" class="btn btn--primary">Réserver une table</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div class="lightbox">
+    <button class="lightbox__close" aria-label="Fermer l'aperçu">&times;</button>
+    <div class="lightbox__inner">
+      <div data-lightbox-media></div>
+      <p class="lightbox__caption"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <img src="images/logo-mark.svg" alt="" class="brand__mark" width="38" height="38" />
+            <span class="brand__text">La Paillote de Massane</span>
+          </a>
+          <p>Bar-restaurant en terrasse au cœur du décor de Massane. Cuisine méditerranéenne et cocktails au coucher du soleil.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l1-4h-4V7.5C13 6.4 13.5 6 14.8 6H17V2.2C16.5 2.1 15 2 13.5 2 10.4 2 8 3.9 8 7.2V10H5v4h3v8h5Z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="carte.html">La Carte</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Horaires</h4>
+          <ul>
+            <li>Lun – Ven : 10h – 23h</li>
+            <li>Sam – Dim : 9h – 00h</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>Chemin de Massane, 34000</li>
+            <li><a href="tel:+33400000000">04 00 00 00 00</a></li>
+            <li><a href="mailto:contact@lapaillotedemassane.fr">contact@lapaillotedemassane.fr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> La Paillote de Massane. Tous droits réservés.</p>
+        <p>Site conçu avec soin, ambiance de Massane.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retour en haut de page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:lapaillotegrauduroi.com)",
+      "Bash(npx --version)",
+      "Bash(where.exe python3 *)",
+      "Bash(where.exe python *)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code} %{size_download} bytes\\\\n\" \"https://images.pexels.com/photos/32935595/pexels-photo-32935595/free-photo-of-tropical-beach-bar-with-bamboo-thatched-roof.jpeg?auto=compress&cs=tinysrgb&w=1600\")",
+      "Bash(curl -sS -L -o hero-paillote.jpg \"https://images.pexels.com/photos/32935595/pexels-photo-32935595/free-photo-of-tropical-beach-bar-with-bamboo-thatched-roof.jpeg?auto=compress&cs=tinysrgb&w=1920\")",
+      "Bash(curl -sS -L -o about-paillote.jpg \"https://images.pexels.com/photos/27582039/pexels-photo-27582039/free-photo-of-a-wooden-bar-with-stools-and-a-view-of-the-ocean.jpeg?auto=compress&cs=tinysrgb&w=1000\")",
+      "Bash(curl -sS -L -o carte-petit-dej.jpg \"https://images.pexels.com/photos/17216072/pexels-photo-17216072/free-photo-of-coffee-croissants-and-a-fruit-on-the-table.jpeg?auto=compress&cs=tinysrgb&w=1000\")",
+      "Bash(curl -sS -L -o carte-plats.jpg \"https://images.pexels.com/photos/28843593/pexels-photo-28843593/free-photo-of-grilled-fish-with-lemons-and-chives-on-plate.jpeg?auto=compress&cs=tinysrgb&w=1000\")",
+      "Bash(curl -sS -L -o carte-bar.jpg \"https://images.pexels.com/photos/29751758/pexels-photo-29751758/free-photo-of-colorful-cocktails-on-madrid-rooftop.jpeg?auto=compress&cs=tinysrgb&w=1000\")"
+    ]
+  }
+}
