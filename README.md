@@ -73,17 +73,18 @@ pages HTML et dans le bloc JSON-LD de `index.html`) :
 
 ## 📬 Formulaire de contact
 
-Le formulaire de `contact.html` est connecté à **Formspree** (https://formspree.io), endpoint
-`https://formspree.io/f/maewqnba`. Chaque envoi :
-- déclenche un email à `lapaillotedemassane@gmail.com`
-- reste consultable dans le tableau de bord Formspree (historique, export CSV)
+Le formulaire de `contact.html` est connecté à **Web3Forms** (https://web3forms.com), via une
+clé d'accès (`access_key`) intégrée dans un champ caché du formulaire. Chaque envoi déclenche
+un email à `lapaillotedemassane@gmail.com`, sans dashboard à consulter ni étape de confirmation.
 
 Le formulaire est envoyé en arrière-plan (`fetch`) pour garder le message de confirmation
-personnalisé du site, sans rechargement de page ni redirection vers Formspree.
+personnalisé du site, sans rechargement de page.
 
-Pour changer le compte destinataire : connectez-vous sur [formspree.io](https://formspree.io),
-créez un nouveau formulaire, puis remplacez l'endpoint dans l'attribut `action` du `<form>` de
-`contact.html`.
+Limite du plan gratuit Web3Forms : 250 envois par mois.
+
+Pour changer l'adresse de destination : allez sur [web3forms.com](https://web3forms.com),
+entrez la nouvelle adresse email pour générer une nouvelle clé d'accès, puis remplacez la
+valeur du champ caché `access_key` dans le `<form>` de `contact.html`.
 
 ## 🙏 Crédits photo
 
