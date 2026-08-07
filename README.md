@@ -2,6 +2,17 @@
 
 Site vitrine complet en HTML / CSS / JS pur (aucun framework, aucune étape de build).
 
+## 🔒 Protection temporaire par code d'accès
+
+Le site est actuellement protégé par un code d'accès (`110302`) le temps de sa préparation :
+un visiteur doit taper ce code avant de voir quoi que ce soit. **Ce n'est pas une vraie
+sécurité** (le code est visible dans le code source par un utilisateur technique), juste un
+frein pour les visiteurs qui tombent sur le lien avant le lancement officiel.
+
+**Pour rendre le site public**, dans les 8 fichiers `.html` du site, supprimez le bloc encadré
+par les commentaires `<!-- ACCESS GATE -->` / `<!-- /ACCESS GATE -->` (4 lignes en haut de
+chaque `<head>`), puis supprimez le fichier `js/access-gate.js`.
+
 ## Structure du projet
 
 ```

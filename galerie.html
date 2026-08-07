@@ -2,6 +2,10 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
+  <!-- ACCESS GATE — supprimer ce bloc (jusqu'a /ACCESS GATE) + le fichier js/access-gate.js pour rendre le site public -->
+  <script>if(sessionStorage.getItem('siteUnlocked')!=='true'){document.documentElement.style.display='none';}</script>
+  <script src="js/access-gate.js"></script>
+  <!-- /ACCESS GATE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galerie photos | La Paillote de Massane</title>
   <meta name="description" content="Découvrez en images l'ambiance de La Paillote de Massane : terrasse, cocktails, plats, soirées et décor de Massane." />
