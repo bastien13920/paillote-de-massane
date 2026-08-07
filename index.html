@@ -35,13 +35,18 @@
 
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Données structurées SEO : fiche établissement -->
+  <!-- Données structurées SEO : fiche établissement (référencement local) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Restaurant",
+    "@type": ["Restaurant", "BarOrPub"],
     "name": "La Paillote de Massane",
-    "image": "https://www.lapaillotedemassane.fr/images/hero-paillote.jpg",
+    "description": "Bar à tapas premium au bord de mer à Massane : tapas faits maison, paninis et cocktails dans une ambiance conviviale au coucher du soleil.",
+    "image": [
+      "https://www.lapaillotedemassane.fr/images/hero-paillote.jpg",
+      "https://www.lapaillotedemassane.fr/images/about-paillote.jpg",
+      "https://www.lapaillotedemassane.fr/images/carte-plats.jpg"
+    ],
     "servesCuisine": ["Tapas", "Bar à cocktails", "Paninis"],
     "priceRange": "€€",
     "address": {
@@ -51,13 +56,22 @@
       "addressCountry": "FR"
     },
     "telephone": "+33-4-00-00-00-00",
+    "email": "lapaillotedemassane@gmail.com",
     "url": "https://www.lapaillotedemassane.fr/",
+    "menu": "https://www.lapaillotedemassane.fr/carte.html",
+    "acceptsReservations": "True",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "10:00",
         "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "00:00"
       }
     ]
   }
