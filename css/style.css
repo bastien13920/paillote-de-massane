@@ -1371,6 +1371,26 @@ h4 {
   animation: fadeUp 0.4s ease both;
 }
 
+.form-error-banner {
+  display: none;
+  background: #b3452c;
+  color: var(--color-sand-light);
+  padding: 1rem 1.3rem;
+  border-radius: 10px;
+  margin-bottom: 1.3rem;
+  font-size: 0.92rem;
+}
+
+.form-error-banner.is-visible {
+  display: block;
+  animation: fadeUp 0.4s ease both;
+}
+
+.contact-form button[type="submit"][disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
 /* --- 15. CTA bandeau final --------------------------------------------------- */
 .cta-band {
   position: relative;

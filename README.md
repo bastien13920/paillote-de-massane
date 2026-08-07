@@ -73,17 +73,17 @@ pages HTML et dans le bloc JSON-LD de `index.html`) :
 
 ## 📬 Formulaire de contact
 
-Le formulaire de `contact.html` fonctionne côté front (validation + message de confirmation)
-mais n'envoie rien nulle part : il n'y a pas de serveur derrière. Pour recevoir réellement les
-messages, deux options simples et gratuites :
+Le formulaire de `contact.html` est connecté à **Formspree** (https://formspree.io), endpoint
+`https://formspree.io/f/maewqnba`. Chaque envoi :
+- déclenche un email à `lapaillotedemassane@gmail.com`
+- reste consultable dans le tableau de bord Formspree (historique, export CSV)
 
-1. **Formspree** (https://formspree.io) : créez un compte, récupérez votre endpoint, puis
-   changez le formulaire en :
-   ```html
-   <form id="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
-   ```
-2. **Netlify Forms** si vous hébergez sur Netlify plutôt que GitHub Pages : ajoutez
-   `netlify` comme attribut au `<form>`.
+Le formulaire est envoyé en arrière-plan (`fetch`) pour garder le message de confirmation
+personnalisé du site, sans rechargement de page ni redirection vers Formspree.
+
+Pour changer le compte destinataire : connectez-vous sur [formspree.io](https://formspree.io),
+créez un nouveau formulaire, puis remplacez l'endpoint dans l'attribut `action` du `<form>` de
+`contact.html`.
 
 ## 🙏 Crédits photo
 

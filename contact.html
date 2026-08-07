@@ -98,7 +98,7 @@
               </div>
               <div>
                 <h4>Email</h4>
-                <p><a href="mailto:contact@lapaillotedemassane.fr">contact@lapaillotedemassane.fr</a></p>
+                <p><a href="mailto:lapaillotedemassane@gmail.com">lapaillotedemassane@gmail.com</a></p>
               </div>
             </div>
             <div class="contact-info__item">
@@ -129,10 +129,14 @@
 
         <!-- ===================== FORMULAIRE ===================== -->
         <div data-reveal="right">
-          <form class="contact-form" id="contact-form" novalidate>
+          <form class="contact-form" id="contact-form" action="https://formspree.io/f/maewqnba" method="POST" novalidate>
             <h3 style="margin-bottom:1.4rem;">Formulaire de réservation / contact</h3>
 
             <div class="form-success" role="status">Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.</div>
+            <div class="form-error-banner" role="alert">Une erreur est survenue lors de l'envoi. Merci de réessayer ou de nous appeler directement.</div>
+
+            <input type="hidden" name="_subject" value="Nouvelle demande - La Paillote de Massane" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
             <div class="form-row">
               <div class="form-group">
@@ -183,8 +187,8 @@
             <button type="submit" class="btn btn--primary" style="width:100%;">Envoyer la demande</button>
 
             <p class="form-note">
-              * Champs obligatoires. Ce formulaire est une démonstration front-end : pour recevoir réellement
-              les messages, connectez-le à un service comme Formspree ou Netlify Forms (voir README.md).
+              * Champs obligatoires. Vos informations sont utilisées uniquement pour traiter votre demande
+              (voir notre <a href="politique-confidentialite.html">politique de confidentialité</a>).
             </p>
           </form>
         </div>
@@ -228,7 +232,7 @@
           <ul>
             <li>Massane, 13920</li>
             <li><a href="tel:+33400000000">04 00 00 00 00</a></li>
-            <li><a href="mailto:contact@lapaillotedemassane.fr">contact@lapaillotedemassane.fr</a></li>
+            <li><a href="mailto:lapaillotedemassane@gmail.com">lapaillotedemassane@gmail.com</a></li>
           </ul>
         </div>
       </div>

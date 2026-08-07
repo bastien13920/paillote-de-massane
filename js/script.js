@@ -200,14 +200,16 @@ function initMenuTabs() {
   });
 }
 
-/* --- Formulaire de contact : validation front + message de succès --------- */
+/* --- Formulaire de contact : validation front + envoi réel via Formspree --- */
 function initContactForm() {
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
   const successBox = document.querySelector(".form-success");
+  const errorBox = document.querySelector(".form-error-banner");
+  const submitBtn = form.querySelector('button[type="submit"]');
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     let isValid = true;
 
@@ -226,15 +228,35 @@ function initContactForm() {
 
     if (!isValid) return;
 
-    // Pas de backend fourni : simulation d'envoi + message de confirmation.
-    // Pour un envoi réel, relier ce formulaire à un service comme Formspree,
-    // Netlify Forms ou une fonction serverless (voir README.md).
-    successBox?.classList.add("is-visible");
-    form.reset();
+    errorBox?.classList.remove("is-visible");
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Envoi en cours...";
+    }
 
-    setTimeout(() => {
-      successBox?.classList.remove("is-visible");
-    }, 6000);
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error("Formspree error");
+
+      successBox?.classList.add("is-visible");
+      form.reset();
+
+      setTimeout(() => {
+        successBox?.classList.remove("is-visible");
+      }, 6000);
+    } catch (err) {
+      errorBox?.classList.add("is-visible");
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Envoyer la demande";
+      }
+    }
   });
 }
 
