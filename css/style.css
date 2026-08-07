@@ -1356,6 +1356,69 @@ h4 {
   margin-top: 1rem;
 }
 
+/* --- Sélecteur d'emplacement (formulaire de réservation) ------------------- */
+.zone-picker {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem;
+}
+
+.zone-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1rem 0.6rem;
+  border: 1.5px solid var(--color-sand-dark);
+  border-radius: 12px;
+  background: var(--color-sand-light);
+  cursor: pointer;
+  transition: border-color var(--transition-base), background-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.zone-option:hover {
+  border-color: var(--color-terracotta);
+  transform: translateY(-2px);
+}
+
+.zone-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.zone-option__icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-terracotta);
+}
+
+.zone-option__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.zone-option__label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--color-olive-dark);
+  line-height: 1.25;
+}
+
+.zone-option.is-checked,
+.zone-option:has(input:checked) {
+  border-color: var(--color-terracotta);
+  background: #fdf0e4;
+  box-shadow: 0 0 0 3px rgba(201, 119, 63, 0.14);
+}
+
 .form-success {
   display: none;
   background: var(--color-olive);
@@ -1757,6 +1820,10 @@ h4 {
   .grid--4,
   .grid--2 {
     grid-template-columns: 1fr;
+  }
+
+  .zone-picker {
+    grid-template-columns: 1fr 1fr;
   }
 
   .gallery-grid {

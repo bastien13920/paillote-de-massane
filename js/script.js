@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveNavLink();
   initYear();
   initCookieBanner();
+  initZonePicker();
 });
 
 /* --- Header qui se fige au scroll ---------------------------------------- */
@@ -305,5 +306,19 @@ function initCookieBanner() {
   decline?.addEventListener("click", () => {
     localStorage.setItem("cookieConsent", "declined");
     banner.classList.remove("is-visible");
+  });
+}
+
+/* --- Sélecteur d'emplacement (page Contact) : bascule visuelle des cartes -- */
+function initZonePicker() {
+  const options = document.querySelectorAll(".zone-option");
+  if (!options.length) return;
+
+  options.forEach((option) => {
+    const input = option.querySelector('input[type="radio"]');
+    input?.addEventListener("change", () => {
+      options.forEach((o) => o.classList.remove("is-checked"));
+      option.classList.add("is-checked");
+    });
   });
 }
