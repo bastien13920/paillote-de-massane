@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initBackToTop();
   setActiveNavLink();
   initYear();
+  initCookieBanner();
 });
 
 /* --- Header qui se fige au scroll ---------------------------------------- */
@@ -259,4 +260,28 @@ function initBackToTop() {
 function initYear() {
   const yearEl = document.querySelector("#current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+/* --- Bandeau cookies (RGPD) : n'affiche rien tant qu'un choix n'a pas été fait -- */
+function initCookieBanner() {
+  const banner = document.querySelector(".cookie-banner");
+  if (!banner) return;
+
+  const consent = localStorage.getItem("cookieConsent");
+  if (!consent) {
+    window.setTimeout(() => banner.classList.add("is-visible"), 800);
+  }
+
+  const accept = banner.querySelector("[data-cookie-accept]");
+  const decline = banner.querySelector("[data-cookie-decline]");
+
+  accept?.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    banner.classList.remove("is-visible");
+  });
+
+  decline?.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "declined");
+    banner.classList.remove("is-visible");
+  });
 }
