@@ -378,7 +378,7 @@ function initNewsletterForm() {
   const form = document.querySelector("#newsletter-form");
   if (!form) return;
 
-  const successBox = form.querySelector(".newsletter-success");
+  const successBox = form.parentElement.querySelector(".newsletter-success");
   const emailInput = form.querySelector('input[type="email"]');
   const submitBtn = form.querySelector('button[type="submit"]');
 
