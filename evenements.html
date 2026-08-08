@@ -98,6 +98,54 @@
             </div>
           </div>
         </div>
+
+        <div class="countdown-block" data-reveal style="margin-top:2rem;">
+          <p class="countdown-block__title">Ouverture dans</p>
+          <div class="countdown" data-countdown>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-cd-days>–</span>
+              <span class="countdown__label">Jours</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-cd-hours>–</span>
+              <span class="countdown__label">Heures</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-cd-minutes>–</span>
+              <span class="countdown__label">Minutes</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-cd-seconds>–</span>
+              <span class="countdown__label">Secondes</span>
+            </div>
+          </div>
+          <div class="calendar-buttons">
+            <a
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Inauguration%20de%20La%20Paillote%20de%20Massane&dates=20270305T170000/20270305T220000&details=Venez%20c%C3%A9l%C3%A9brer%20avec%20nous%20l'ouverture%20de%20La%20Paillote%20de%20Massane%2C%20bar%20%C3%A0%20tapas%20au%20bord%20de%20mer%20%C3%A0%20Massane.%20Entr%C3%A9e%20libre.&location=Massane%2C%2013920%2C%20France"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--dark btn--sm"
+              data-calendar-track="Google Calendar"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Google Calendar
+            </a>
+            <a href="inauguration-paillote.ics" class="btn btn--ghost btn--sm" style="color:var(--color-olive-dark);" data-calendar-track="Apple/Outlook (.ics)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3M12 15l-4-4M12 15l4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+              Apple / Outlook (.ics)
+            </a>
+          </div>
+        </div>
+
+        <div class="newsletter-block" data-reveal style="margin-top:2rem;">
+          <h3>Soyez prévenu(e) le jour de l'ouverture</h3>
+          <p>Laissez votre email, on vous écrit dès que les portes s'ouvrent.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate>
+            <input type="email" placeholder="Votre email" required aria-label="Votre email" />
+            <button type="submit" class="btn btn--primary btn--sm">Me prévenir</button>
+          </form>
+          <p class="newsletter-success">Merci ! Vous serez prévenu(e) dès l'ouverture. 🎉</p>
+        </div>
       </div>
     </section>
 

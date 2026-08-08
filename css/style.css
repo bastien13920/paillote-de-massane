@@ -1940,3 +1940,122 @@ h4 {
 .access-gate__error.is-visible {
   display: block;
 }
+
+/* --- Compte à rebours, calendrier, newsletter d'ouverture -------------------- */
+.countdown-block {
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+
+.countdown-block__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-olive-dark);
+  margin-bottom: 1.4rem;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.countdown__unit {
+  min-width: 78px;
+  background: var(--color-sand);
+  border-radius: 12px;
+  padding: 0.9rem 0.6rem;
+}
+
+.countdown__value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--color-terracotta-dark);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__label {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-olive-dark);
+}
+
+.calendar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.calendar-buttons svg {
+  width: 18px;
+  height: 18px;
+}
+
+.newsletter-block {
+  background: var(--color-olive-dark);
+  color: var(--color-sand-light);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  text-align: center;
+}
+
+.newsletter-block h3 {
+  color: var(--color-sand-light);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-block p {
+  font-size: 0.88rem;
+  color: #d8dcc4;
+  margin-bottom: 1.4rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  max-width: 460px;
+  margin-inline: auto;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.85rem 1.1rem;
+  border: 1.5px solid transparent;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--color-sand-light);
+  color: var(--color-brown-text);
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--color-gold);
+}
+
+.newsletter-success {
+  display: none;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--color-gold);
+}
+
+.newsletter-success.is-visible {
+  display: block;
+}

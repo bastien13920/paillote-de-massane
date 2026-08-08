@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initYear();
   initCookieBanner();
   initZonePicker();
+  initCountdown();
+  initCalendarTracking();
+  initNewsletterForm();
 });
 
 /* --- Header qui se fige au scroll ---------------------------------------- */
@@ -306,6 +309,115 @@ function initCookieBanner() {
   decline?.addEventListener("click", () => {
     localStorage.setItem("cookieConsent", "declined");
     banner.classList.remove("is-visible");
+  });
+}
+
+/* --- Clé Web3Forms partagée (formulaire de contact, newsletter, suivi calendrier) */
+const WEB3FORMS_ACCESS_KEY = "7446bb2b-20fe-4f5f-bd4b-61362725dc94";
+
+/* --- Compte à rebours vers l'inauguration (5 mars 2027, 17h00) ------------- */
+function initCountdown() {
+  const el = document.querySelector("[data-countdown]");
+  if (!el) return;
+
+  const target = new Date("2027-03-05T17:00:00");
+  const daysEl = el.querySelector("[data-cd-days]");
+  const hoursEl = el.querySelector("[data-cd-hours]");
+  const minutesEl = el.querySelector("[data-cd-minutes]");
+  const secondsEl = el.querySelector("[data-cd-seconds]");
+
+  function update() {
+    const diff = target.getTime() - Date.now();
+    if (diff <= 0) {
+      daysEl.textContent = "0";
+      hoursEl.textContent = "0";
+      minutesEl.textContent = "0";
+      secondsEl.textContent = "0";
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    daysEl.textContent = days;
+    hoursEl.textContent = String(hours).padStart(2, "0");
+    minutesEl.textContent = String(minutes).padStart(2, "0");
+    secondsEl.textContent = String(seconds).padStart(2, "0");
+  }
+
+  update();
+  window.setInterval(update, 1000);
+}
+
+/* --- Suivi des clics "Ajouter à mon calendrier" (compteur par email) ------- */
+function initCalendarTracking() {
+  const buttons = document.querySelectorAll("[data-calendar-track]");
+  if (!buttons.length) return;
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const type = btn.dataset.calendarTrack || "inconnu";
+      // Envoi silencieux, sans bloquer l'ouverture du lien/téléchargement du calendrier.
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Ajout calendrier - Inauguration La Paillote de Massane",
+          from_name: "Suivi calendrier (site)",
+          message: "Un visiteur a cliqué sur « Ajouter à mon calendrier » (" + type + ") pour l'inauguration du 5 mars 2027.",
+        }),
+      }).catch(() => {});
+    });
+  });
+}
+
+/* --- Formulaire "Prévenez-moi à l'ouverture" -------------------------------- */
+function initNewsletterForm() {
+  const form = document.querySelector("#newsletter-form");
+  if (!form) return;
+
+  const successBox = form.querySelector(".newsletter-success");
+  const emailInput = form.querySelector('input[type="email"]');
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailInput.focus();
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Envoi...";
+    }
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Inscription ouverture - La Paillote de Massane",
+          from_name: "Inscription newsletter (site)",
+          email: email,
+          message: "Nouvelle inscription pour être prévenu(e) de l'ouverture du 5 mars 2027 : " + email,
+        }),
+      });
+      if (!response.ok) throw new Error("Web3Forms error");
+      successBox?.classList.add("is-visible");
+      form.reset();
+    } catch (err) {
+      emailInput.focus();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Me prévenir";
+      }
+    }
   });
 }
 

@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//La Paillote de Massane//Inauguration//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:inauguration-paillote-massane-20270305@lapaillotedemassane.fr
+DTSTAMP:20260808T000000Z
+DTSTART:20270305T170000
+DTEND:20270305T220000
+SUMMARY:Inauguration de La Paillote de Massane
+DESCRIPTION:Venez célébrer avec nous l'ouverture de La Paillote de Massane\, bar à tapas au bord de mer à Massane. Entrée libre.
+LOCATION:Massane\, 13920\, France
+URL:https://www.lapaillotedemassane.fr/evenements.html
+END:VEVENT
+END:VCALENDAR
