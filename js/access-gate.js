@@ -18,7 +18,7 @@
   overlay.innerHTML =
     '<div class="access-gate__box">' +
     '<img src="images/logo-mark.svg" alt="" class="access-gate__logo" width="52" height="52" />' +
-    "<h1>La Paillote de Massane</h1>" +
+    "<h1>LPM</h1>" +
     "<p>Site en cours de préparation, accès réservé.</p>" +
     '<form class="access-gate__form" id="access-gate-form">' +
     '<input type="password" inputmode="numeric" id="access-gate-input" placeholder="Code d\'accès" autocomplete="off" autofocus />' +
