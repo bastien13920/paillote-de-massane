@@ -1449,9 +1449,9 @@ h4 {
 .cta-band svg,
 .cta-band img {
   position: absolute;
-  inset: -8%;
-  width: 116%;
-  height: 116%;
+  inset: -18%;
+  width: 136%;
+  height: 136%;
   object-fit: cover;
   z-index: -2;
 }
