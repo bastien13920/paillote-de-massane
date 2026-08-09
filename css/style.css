@@ -1451,6 +1451,7 @@ h4 {
   position: absolute;
   inset: -18%;
   width: 136%;
+  max-width: none;
   height: 136%;
   object-fit: cover;
   z-index: -2;
