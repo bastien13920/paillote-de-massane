@@ -116,7 +116,10 @@ function initParallax() {
       // l'image de son cadre, même sur les sections tout en bas d'une longue page.
       const container = layer.parentElement || layer;
       const rect = container.getBoundingClientRect();
-      const offset = rect.top * speed;
+      const raw = rect.top * speed;
+      // Plafonné à ±50px : garantit que le décalage ne dépasse jamais la marge
+      // de sécurité prévue en CSS (inset négatif), quelle que soit la hauteur d'écran.
+      const offset = Math.max(-50, Math.min(50, raw));
       layer.style.transform = `translate3d(0, ${offset}px, 0)`;
     });
     ticking = false;
