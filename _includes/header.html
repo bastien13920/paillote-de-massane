@@ -1,0 +1,21 @@
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo-mark.svg" alt="" class="brand__mark" width="38" height="38" />
+        <span class="brand__text"><small>Bar &amp; Tapas</small>La Paillote de Massane</span>
+      </a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+        <a href="index.html"{% if include.active == "accueil" %} class="is-active"{% endif %}>Accueil</a>
+        <a href="carte.html"{% if include.active == "carte" %} class="is-active"{% endif %}>La Carte</a>
+        <a href="evenements.html"{% if include.active == "evenements" %} class="is-active"{% endif %}>Événements</a>
+        <a href="galerie.html"{% if include.active == "galerie" %} class="is-active"{% endif %}>Galerie</a>
+        <a href="contact.html"{% if include.active == "contact" %} class="is-active"{% endif %}>Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html#reservation" class="btn btn--primary btn--sm">Réserver une table</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
