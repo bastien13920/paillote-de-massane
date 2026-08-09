@@ -109,10 +109,14 @@ function initParallax() {
   let ticking = false;
 
   const update = () => {
-    const scrollY = window.scrollY;
     layers.forEach((layer) => {
       const speed = parseFloat(layer.dataset.parallax) || 0.15;
-      const offset = scrollY * speed;
+      // Décalage basé sur la position de la section à l'écran (pas le scroll
+      // global de la page), pour que l'effet reste borné et ne décolle jamais
+      // l'image de son cadre, même sur les sections tout en bas d'une longue page.
+      const container = layer.parentElement || layer;
+      const rect = container.getBoundingClientRect();
+      const offset = rect.top * speed;
       layer.style.transform = `translate3d(0, ${offset}px, 0)`;
     });
     ticking = false;
